@@ -1,0 +1,94 @@
+doctype html
+html(lang="en" ng-app="jaxmessengers")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(href='./css/bootstrap/bootstrap.css' rel='stylesheet' type="text/css")
+        link(href='./css/main.css?1234567890' rel='stylesheet' type='text/css')
+        title Jaxmessengers
+        
+        script(type="text/javascript" src="./lib/angular.min.js")
+        script(type="text/javascript" src="./lib/angular-animate.js")
+        script(type="text/javascript" src="./lib/ui-bootstrap.js")
+        script(type="text/javascript" src="./lib/ui-bootstrap-tpls.js")
+        script(type="text/javascript" src="./js/app.js")
+        script(type="text/javascript" src="./js/controllers/maincontroller.js")
+
+   
+    
+    body(ng-controller="maincontroller" ng-cloak class="ng-cloak")
+                div(class="crew" ng-class="status == 'crew'?'zeropos':''")
+                    div(class="col-xs-10")
+                        div(class="row")
+                            h2(class="showlabel") Håvard Dahl
+                                label - Trommer - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/the.real.dahlingen" target="_blank") Facebook
+
+                        div(class="row")
+                            h2(class="showlabel") Elias Louis Wahl Sandvold
+                                label - Gitar - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/elias.sandvold" target="_blank") Facebook
+                        div(class="row")
+                            h2(class="showlabel") Thomas Winnæss 
+                                label - Kontrabass - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/profile.php?id=100003364458763" target="_blank") Facebook
+                        div(class="row")
+                            h2(class="showlabel") Jonas "Jax" Ulleland
+                                label - Sax - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/julleland" target="_blank") Facebook
+                        div(class="row")
+                            h2(class="showlabel") Toto Kruse
+                                label - Sax - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/christofer.kruse" target="_blank") Facebook
+                        div(class="row")
+                            h2(class="showlabel") Joachim Lycke
+                                label - El gitar - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/joachim.lyche" target="_blank") Facebook
+                        div(class="row")
+                            h2(class="showlabel") Andreas Vind Brix
+                                label - Bassgitar -  
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/andreas.brix.75" target="_blank") Facebook
+                        div(class="row")
+                            h2(class="showlabel") Theodor Christian Dalseth
+                                label - Trommer - 
+                                    a(type="button" class="btn btn-primary" href="https://www.facebook.com/theodor.dalseth" target="_blank") Facebook
+
+                    div(class="col-xs-2 menutextR")    
+                        h1(ng-click="changestatustocrew()") C
+                        h1(ng-click="changestatustocrew()") R
+                        h1(ng-click="changestatustocrew()") E
+                        h1(ng-click="changestatustocrew()") W
+
+                div(class="main")
+                    div(id="circle")
+                    div(id="{{maintext}}")
+                    div(id="introdiv")
+                    div(class="contact" ng-if="status==false")
+                        h4 KONTAKT
+                        p Håvard Haldorsen Dahl
+                        p 95 18 68 26
+                        p Dahlingen@outlook.com
+                        a(type="button" class="btn btn-primary col-xs-12" href="https://www.facebook.com/jaxmessengers/" target="_blank") Facebook
+
+                div(class="setlist" ng-class="status == 'setlist'?'zeroposs':''")
+                    div(class="col-xs-2 menutextL")
+                        h1(ng-click="changestatustosetlist()") S
+                        h1(ng-click="changestatustosetlist()") E
+                        h1(ng-click="changestatustosetlist()") T
+                        h1(ng-click="changestatustosetlist()") L
+                        h1(ng-click="changestatustosetlist()") I
+                        h1(ng-click="changestatustosetlist()") S
+                        h1(ng-click="changestatustosetlist()") T
+                    div(class="col-xs-10")
+                        h2(class="showlabel") Mr PC - John Coltrane
+                        h2(class="showlabel") Alice in Wonderland - Sammy Fain
+                        h2(class="showlabel") Skating in central park - John Lewis
+                        h2(class="showlabel") Freddie Freeloader - Miles Davis
+                        h2(class="showlabel") Footprints - Wayne shorter
+                        h2(class="showlabel") Nature boy - Eden Ahbez
+                        h2(class="showlabel") Someday my prince will come - Frank Churchill
+                        h2(class="showlabel") Stella by Starlight - Victor Young
+                        h2(class="showlabel") Blue Trane - John Coltrane
+                        h2(class="showlabel") Take the "A" train - Billy Strayhorn
+                        h2(class="showlabel") Vi tar imot alle ønsker du skulle ha:-)
+
